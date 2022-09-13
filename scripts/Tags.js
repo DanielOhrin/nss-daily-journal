@@ -19,7 +19,7 @@ export const TagCheck = async (tagArr) => {
             }
             IDArr.push(newTag.id)
             newId++
-            fetch(`http://localhost:8088/tags`, {
+            await fetch(`http://localhost:8088/tags`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -40,29 +40,30 @@ export const findTag = (subject) => {
 
 //Creates a new object in EntryTags
 export const newEntryTag = async (idOfEntry, tagArr) => {
-    const tagEntries = await getEntryTags() //Also Not updating after being called once
+    const tagEntries = await getEntryTags() // Also Not updating after being called once
     const tagIds = await TagCheck(tagArr)
 
     let lastIndex = tagEntries.length - 1
     let newId = tagEntries[lastIndex].id + 1
 
+    let i = 0
     for (const id of tagIds) {
+
         const newEntry = {
             id: newId,
             entryId: idOfEntry,
             tagId: id
         }
 
-        newId++
-
-        fetch('http://localhost:8088/entrytags', {
+        await fetch('http://localhost:8088/entrytags', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newEntry)
         })
+
+        newId++
     }
-
-
+    return lastIndex;
 }

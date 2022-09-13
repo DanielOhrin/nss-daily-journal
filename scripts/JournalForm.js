@@ -2,7 +2,8 @@ import { saveJournalEntry, NewEntry, clearNewEntry, getTags, getEntryTags } from
 import { Moods } from "./Moods.js"
 import { currentEntries } from "./main.js"
 import { MoodFilter } from "./MoodFilter.js"
-import { newEntryTag, TagCheck } from "./Tags.js"
+import { newEntryTag } from "./Tags.js"
+import { Instructors } from "./Instructors.js"
 
 const tags = await getTags()
 
@@ -24,6 +25,9 @@ export const JournalForm = () => {
     ${Moods()}
     </fieldset>
     <fieldset>
+    ${Instructors()}
+    </fieldset>
+    <fieldset>
     <label for="tags">Tags</label>
     <input type="text" name="tags" id="entryForm__tags">
     </fieldset>
@@ -40,7 +44,7 @@ document.addEventListener(
     e => {
         if (e.target.id === "save-btn") {
             const newEntry = NewEntry()
-            if (Object.keys(newEntry).length === 4) {//inside of the IF statement
+            if (Object.keys(newEntry).length >= 4 && newEntry.moodId) {//inside of the IF statement
 
                 const lastIndex = currentEntries.length - 1
                 newEntry.id = currentEntries[lastIndex].id + 1
@@ -61,3 +65,4 @@ document.addEventListener(
 
     }
 )
+

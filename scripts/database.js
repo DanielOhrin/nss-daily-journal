@@ -90,3 +90,17 @@ export const getTags = () => {
         return response.json()
     })
 }
+
+export const setInstructor = (id) => {
+    database.newEntry.instructorId = id
+}
+
+export const getInstructors = () => {
+    return fetch("http://localhost:8088/instructors").then(response => {
+        return response.json()
+    })
+}
+
+export const clearInstructor = () => {
+    delete database.newEntry.instructorId
+}
