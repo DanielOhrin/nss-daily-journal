@@ -1,35 +1,35 @@
 import { getEntryTags, getTags } from "./database.js"
 
 //Checks if the tag given already exists within the database. If it does not, it creates a new object for that tag in the database. Returns the matching tag's id in both cases.
-export const TagCheck = async (tagToCheck) => {
+export const TagCheck = async (tagArr) => {
     const tags = await getTags() // Not updating after being called once
+    const IDArr = []
+    let lastIndex = tags.length - 1;
+    let newId = tags[lastIndex].id + 1;
 
-    const tempTagArr = await findTag(tagToCheck)
-    
-    if (tempTagArr[0]) {
-        return tempTagArr[0].id
-    } else {
-        const lastIndex = tags.length - 1
-        const newId = tags[lastIndex].id + 1
-        const newTag = {
-            id: newId,
-            subject: tagToCheck
+    for (const tag of tagArr) {
+        const tempTagArr = await findTag(tag)
+
+        if (tempTagArr[0]) {
+            IDArr.push(tempTagArr[0].id)
+        } else {
+            const newTag = {
+                id: newId,
+                subject: tag
+            }
+            IDArr.push(newTag.id)
+            newId++
+            fetch(`http://localhost:8088/tags`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newTag)
+            })
         }
-
-        fetch(`http://localhost:8088/tags`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newTag)
-        }).then(
-                () => {
-                    getTags() //Get all tags
-                }
-            )
-
-        return newTag.id
     }
+    return IDArr
+
 }
 
 export const findTag = (subject) => {
@@ -39,27 +39,30 @@ export const findTag = (subject) => {
 }
 
 //Creates a new object in EntryTags
-export const newEntryTag = async (idOfEntry, idOfTag) => {
+export const newEntryTag = async (idOfEntry, tagArr) => {
     const tagEntries = await getEntryTags() //Also Not updating after being called once
+    const tagIds = await TagCheck(tagArr)
 
-    const lastIndex = tagEntries.length - 1
-    const newId = tagEntries[lastIndex].id + 1
+    let lastIndex = tagEntries.length - 1
+    let newId = tagEntries[lastIndex].id + 1
 
-    const newEntry = {
-        id: newId,
-        entryId: idOfEntry,
-        tagId: idOfTag
+    for (const id of tagIds) {
+        const newEntry = {
+            id: newId,
+            entryId: idOfEntry,
+            tagId: id
+        }
+
+        newId++
+
+        fetch('http://localhost:8088/entrytags', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newEntry)
+        })
     }
 
-    fetch('http://localhost:8088/entrytags', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newEntry)
-    }).then(
-        () => {
-            getEntryTags()
-        }
-    )
+
 }
