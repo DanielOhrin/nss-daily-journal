@@ -5,34 +5,39 @@
       "date": "09/8/2022",
       "concept": "HTML & CSS",
       "entry": "We talked about coding today.",
-      "moodId": 1
+      "moodId": 1,
+      "instructorId": 0
     },
     {
       "id": 2,
       "date": "09/8/2022",
       "concept": "State",
       "entry": "I learned about local vs. Global state, and how it affects the DOM when reloading.",
-      "moodId": 2
+      "moodId": 2,
+      "instructorId": 0
     },
     {
       "id": 3,
       "date": "09/8/2022",
       "concept": "JS & Back-end",
       "entry": "As far as I could find out, it requires a framework and/or back-end work to store user input permanently.",
-      "moodId": 3
+      "moodId": 3,
+      "instructorId": 0
     },
     {
       "id": 4,
       "date": "07/26/2025",
       "concept": "Complex Flexbox",
       "entry": "(Example) I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
-      "moodId": 3
+      "moodId": 3,
+      "instructorId": 0
     },
     {
       "date": "09/9/2022",
       "concept": "JSON & APIs",
       "entry": "Today I attempted to learn all about JSON and using it as a database. I am very confused on most parts of it, and feel like the only reason I got through the project is because it was guided so closely. I want to understand this off the top of my head, and not have to reference old code so much :(",
       "moodId": 3,
+      "instructorId": 0,
       "id": 5
     },
     {
@@ -40,6 +45,7 @@
       "entry": "I think I'm finally understanding how fetch methodology works, but I notice I need to write algorithms more, even if they are obvious. I also need to organize my code more.",
       "concept": "JSON API & Fetch",
       "date": "09/12/2022",
+      "instructorId": 0,
       "id": 6
     },
     {
@@ -47,13 +53,15 @@
       "concept": "JSON API & Async/Await",
       "entry": "Today I started to really understand how async/await work, and how to get the RESULT of a promise rather than the promise itself. I have a long way to go, but I'm feeling REALLY good now that I got the tags to work!",
       "moodId": 1,
+      "instructorId": 0,
       "id": 7
     },
     {
       "date": "09/12/2022",
       "concept": "JSON API Errors & Debugging",
-      "entry": "I think I have found the root cause of my internal server error. I will discuss with instructor(s) tomorrow.",
+      "entry": "I think I have found the root cause of my internal server error. I will attempt to fix it tomorrow.",
       "moodId": 2,
+      "instructorId": 0,
       "id": 8
     },
     {
@@ -61,7 +69,15 @@
       "concept": "Successful Debugging",
       "entry": "I successfully refactored my code, and now my tags are working!",
       "moodId": 1,
+      "instructorId": 0,
       "id": 9
+    },
+    {
+      "date": "09/13/2022",
+      "concept": "Daily Journal Project",
+      "entry": "I finally finished this project. I learned a lot about API and fetching code from a database. I'm glad it took me so long because I spent a lot of time researching how certain code works.",
+      "moodId": 1,
+      "id": 10
     }
   ],
   "moods": [
@@ -165,14 +181,34 @@
       "tagId": 16
     },
     {
-      "id": 19,
+      "id": 18,
       "entryId": 9,
       "tagId": 18
     },
     {
-      "id": 18,
+      "id": 19,
       "entryId": 9,
       "tagId": 17
+    },
+    {
+      "id": 20,
+      "entryId": 10,
+      "tagId": 22
+    },
+    {
+      "id": 21,
+      "entryId": 10,
+      "tagId": 23
+    },
+    {
+      "id": 22,
+      "entryId": 10,
+      "tagId": 6
+    },
+    {
+      "id": 23,
+      "entryId": 10,
+      "tagId": 10
     }
   ],
   "tags": [
@@ -247,6 +283,48 @@
     {
       "id": 18,
       "subject": "loops"
+    },
+    {
+      "id": 19,
+      "subject": "test"
+    },
+    {
+      "id": 20,
+      "subject": "testing"
+    },
+    {
+      "id": 21,
+      "subject": "debugger"
+    },
+    {
+      "id": 22,
+      "subject": "journal"
+    },
+    {
+      "id": 23,
+      "subject": "project"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 0,
+      "first_name": "Not",
+      "last_name": "Applicable"
+    },
+    {
+      "id": 1,
+      "first_name": "Dakota",
+      "last_name": "Lambert"
+    },
+    {
+      "id": 2,
+      "first_name": "Valerie",
+      "last_name": "Freeman"
+    },
+    {
+      "id": 3,
+      "first_name": "Ross",
+      "last_name": "Stovenour"
     }
   ]
 }
