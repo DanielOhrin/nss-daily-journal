@@ -48,10 +48,7 @@ document.addEventListener(
                 if (document.getElementById("entryForm__tags").value) {
                     const tagArr = document.getElementById("entryForm__tags").value.split(",").map(value => value.trim().toLowerCase().replace(' ', '-'))
                     
-                    tagArr.forEach(async (tag) => {
-                        const tagId = await TagCheck(tag)
-                        newEntryTag(newEntry.id, tagId)
-                    })
+                    newEntryTag(newEntry.id, tagArr)
 
                 }
 

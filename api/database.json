@@ -55,6 +55,13 @@
       "entry": "I think I have found the root cause of my internal server error. I will discuss with instructor(s) tomorrow.",
       "moodId": 2,
       "id": 8
+    },
+    {
+      "date": "09/13/2022",
+      "concept": "Successful Debugging",
+      "entry": "I successfully refactored my code, and now my tags are working!",
+      "moodId": 1,
+      "id": 9
     }
   ],
   "moods": [
@@ -141,6 +148,31 @@
       "id": 14,
       "entryId": 8,
       "tagId": 9
+    },
+    {
+      "id": 15,
+      "entryId": 9,
+      "tagId": 15
+    },
+    {
+      "id": 16,
+      "entryId": 9,
+      "tagId": 14
+    },
+    {
+      "id": 17,
+      "entryId": 9,
+      "tagId": 16
+    },
+    {
+      "id": 19,
+      "entryId": 9,
+      "tagId": 18
+    },
+    {
+      "id": 18,
+      "entryId": 9,
+      "tagId": 17
     }
   ],
   "tags": [
@@ -199,6 +231,22 @@
     {
       "id": 14,
       "subject": "debugging"
+    },
+    {
+      "id": 15,
+      "subject": "excited"
+    },
+    {
+      "id": 16,
+      "subject": "dev-tools"
+    },
+    {
+      "id": 17,
+      "subject": "iteration"
+    },
+    {
+      "id": 18,
+      "subject": "loops"
     }
   ]
 }
