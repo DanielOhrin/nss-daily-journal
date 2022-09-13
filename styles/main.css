@@ -1,0 +1,19 @@
+fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 98%
+}
+fieldset > * {
+    width: 12.5em;
+}
+
+[name="entryText"] {
+    width: 20%;
+    aspect-ratio: 2 / 1;
+    max-width: 50%;
+}
+
+p {
+    font-size: 1.05rem;
+    font-weight: 600;
+}

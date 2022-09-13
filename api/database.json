@@ -1,0 +1,204 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "09/8/2022",
+      "concept": "HTML & CSS",
+      "entry": "We talked about coding today.",
+      "moodId": 1
+    },
+    {
+      "id": 2,
+      "date": "09/8/2022",
+      "concept": "State",
+      "entry": "I learned about local vs. Global state, and how it affects the DOM when reloading.",
+      "moodId": 2
+    },
+    {
+      "id": 3,
+      "date": "09/8/2022",
+      "concept": "JS & Back-end",
+      "entry": "As far as I could find out, it requires a framework and/or back-end work to store user input permanently.",
+      "moodId": 3
+    },
+    {
+      "id": 4,
+      "date": "07/26/2025",
+      "concept": "Complex Flexbox",
+      "entry": "(Example) I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
+      "moodId": 3
+    },
+    {
+      "date": "09/9/2022",
+      "concept": "JSON & APIs",
+      "entry": "Today I attempted to learn all about JSON and using it as a database. I am very confused on most parts of it, and feel like the only reason I got through the project is because it was guided so closely. I want to understand this off the top of my head, and not have to reference old code so much :(",
+      "moodId": 3,
+      "id": 5
+    },
+    {
+      "moodId": 1,
+      "entry": "I think I'm finally understanding how fetch methodology works, but I notice I need to write algorithms more, even if they are obvious. I also need to organize my code more.",
+      "concept": "JSON API & Fetch",
+      "date": "09/12/2022",
+      "id": 6
+    },
+    {
+      "date": "09/12/2022",
+      "concept": "JSON API & Async/Await",
+      "entry": "Today I started to really understand how async/await work, and how to get the RESULT of a promise rather than the promise itself. I have a long way to go, but I'm feeling REALLY good now that I got the tags to work!",
+      "moodId": 1,
+      "id": 7
+    },
+    {
+      "date": "09/12/2022",
+      "concept": "JSON API Errors & Debugging",
+      "entry": "I think I have found the root cause of my internal server error. I will discuss with instructor(s) tomorrow.",
+      "moodId": 2,
+      "id": 8
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Ok"
+    },
+    {
+      "id": 3,
+      "label": "Sad"
+    }
+  ],
+  "entrytags": [
+    {
+      "id": 1,
+      "entryId": 2,
+      "tagId": 1
+    },
+    {
+      "id": 2,
+      "entryId": 3,
+      "tagId": 3
+    },
+    {
+      "id": 3,
+      "entryId": 3,
+      "tagId": 3
+    },
+    {
+      "id": 4,
+      "entryId": 5,
+      "tagId": 6
+    },
+    {
+      "id": 5,
+      "entryId": 4,
+      "tagId": 5
+    },
+    {
+      "id": 6,
+      "entryId": 1,
+      "tagId": 7
+    },
+    {
+      "id": 7,
+      "entryId": 1,
+      "tagId": 8
+    },
+    {
+      "id": 8,
+      "entryId": 7,
+      "tagId": 9
+    },
+    {
+      "id": 9,
+      "entryId": 7,
+      "tagId": 10
+    },
+    {
+      "id": 10,
+      "entryId": 7,
+      "tagId": 11
+    },
+    {
+      "id": 11,
+      "entryId": 7,
+      "tagId": 12
+    },
+    {
+      "id": 12,
+      "entryId": 7,
+      "tagId": 13
+    },
+    {
+      "id": 13,
+      "entryId": 8,
+      "tagId": 14
+    },
+    {
+      "id": 14,
+      "entryId": 8,
+      "tagId": 9
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "subject": "state"
+    },
+    {
+      "id": 2,
+      "subject": "user input"
+    },
+    {
+      "id": 3,
+      "subject": "js"
+    },
+    {
+      "id": 4,
+      "subject": "back-end"
+    },
+    {
+      "id": 5,
+      "subject": "flexbox"
+    },
+    {
+      "id": 6,
+      "subject": "api"
+    },
+    {
+      "id": 7,
+      "subject": "html"
+    },
+    {
+      "id": 8,
+      "subject": "css"
+    },
+    {
+      "id": 9,
+      "subject": "fetch"
+    },
+    {
+      "id": 10,
+      "subject": "json"
+    },
+    {
+      "id": 11,
+      "subject": "async"
+    },
+    {
+      "id": 12,
+      "subject": "await"
+    },
+    {
+      "id": 13,
+      "subject": "async/await"
+    },
+    {
+      "id": 14,
+      "subject": "debugging"
+    }
+  ]
+}
